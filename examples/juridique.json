@@ -1,0 +1,6 @@
+{
+  "schema_version":"1.0", "domain":"juridique", "status":"partiel",
+  "target":"https://exemple.fr", "tool":"audit-juridique-rgpd", "score":null, "coverage":0.2,
+  "findings":[{"id":"LEGAL-EXAMPLE-01","title":"Vérification du bandeau cookies à effectuer","status":"a_verifier","severity":"moyenne","evidence":[],"recommendation":"Effectuer un test navigateur avant/après consentement."}],
+  "manual_checks":["Vérifier les contrats de sous-traitance RGPD"]
+}

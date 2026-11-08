@@ -1,0 +1,30 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Audit Web 360 - module result v1",
+  "type":"object",
+  "required":["schema_version","domain","status","target","findings"],
+  "properties":{
+    "schema_version":{"const":"1.0"},
+    "domain":{"enum":["seo","juridique","cybersecurite"]},
+    "status":{"enum":["execute","partiel","non_execute"]},
+    "target":{"type":"string","minLength":1},
+    "executed_at":{"type":["string","null"]},
+    "tool":{"type":"string"},
+    "reason":{"type":"string"},
+    "score":{"type":["number","null"],"minimum":0,"maximum":100},
+    "coverage":{"type":["number","null"],"minimum":0,"maximum":1},
+    "findings":{"type":"array","items":{
+      "type":"object","required":["id","title","status","severity","evidence","recommendation"],
+      "properties":{
+        "id":{"type":"string"},"title":{"type":"string"},
+        "status":{"enum":["non_conformite_demontree","risque","a_verifier","conforme_perimetre","non_applicable"]},
+        "severity":{"enum":["critique","elevee","moyenne","faible","information"]},
+        "evidence":{"type":"array","items":{"type":"string"}},
+        "recommendation":{"type":"string"},"url":{"type":"string"},
+        "confidence":{"enum":["elevee","moyenne","faible"]},
+        "references":{"type":"array","items":{"type":"object","properties":{"title":{"type":"string"},"url":{"type":"string"},"checked_at":{"type":"string"},"type":{"type":"string"}}}}
+      },"additionalProperties":true
+    }},
+    "manual_checks":{"type":"array","items":{"type":"string"}}
+  },"additionalProperties":true
+}

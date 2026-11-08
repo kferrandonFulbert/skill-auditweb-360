@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "seo": {"command": [], "cwd": null, "timeout_seconds": 180},
+    "juridique": {"command": [], "cwd": null, "timeout_seconds": 180},
+    "cybersecurite": {"command": [], "cwd": null, "timeout_seconds": 180}
+  }
+}
