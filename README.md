@@ -25,3 +25,11 @@ Le runner n'effectue aucun scan sans commandes explicitement renseignées et san
 
 ## Important
 Le domaine cyber ne comprend aucun scanner actif. Le Skill juridique déjà créé peut fournir des constats, mais son JSON doit être adapté au schéma commun. Les résultats d'exemple sont fictifs et ne doivent jamais être présentés comme un audit réel.
+
+## Dépendances GitHub officielles de cet orchestrateur
+
+- SEO : https://github.com/kferrandonFulbert/skill-audit-seo (`audit-seo-qualite-web`)
+- Juridique : https://github.com/kferrandonFulbert/skill-audit-juridique-web (`audit-juridique-rgpd`)
+- Cybersécurité : https://github.com/kferrandonFulbert/skill-audit-cyber (`audit-cybersecurite-web`)
+
+Le fichier `references/skills-github.md` détaille l'installation et la compatibilité. L'orchestrateur recherche les **noms déclarés dans les SKILL.md**, pas les noms des dépôts. Les trois modules doivent être installés et accessibles à l'agent pour être invoqués comme Skills. Le lanceur Python ne sait pas invoquer un Skill agent à lui seul ; il peut exécuter uniquement des commandes locales configurées explicitement.
